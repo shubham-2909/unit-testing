@@ -24,7 +24,7 @@ app.post('/sum', async (req, res) => {
 
   const result = await db.result.create({
     data: {
-      a: parsedResponse.data.a,
+      a: parsedResponse.data.b,
       b: parsedResponse.data.b,
       answer: answer,
       type: 'Sum',
