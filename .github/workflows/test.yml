@@ -1,0 +1,24 @@
+name: CI/CD for tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Install dependencies
+        working-directory: 4-express-with-prisma
+        run: bun install && bunx prisma generate
+      - name: Testing the code
+        working-directory: 4-express-with-prisma
+        run: bun run test
