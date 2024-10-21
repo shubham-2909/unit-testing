@@ -1,0 +1,25 @@
+{
+  "name": "4-express-with-prisma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "5.21.1",
+    "express": "^4.21.1",
+    "prisma": "^5.21.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/supertest": "^6.0.2",
+    "vitest-mock-extended": "^2.0.2",
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.3"
+  }
+}
